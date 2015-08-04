@@ -1,0 +1,55 @@
+.valvola-line {
+	margin: 5px;
+}
+
+.valvola-element {
+	margin-right: 30px;
+	vertical-align: middle;
+	font-family: arial, helvetica;
+	font-size: 14px;
+}
+
+.wc-scrollable-grid{
+    display:block;
+}
+
+.wc-time-slots{
+    position: relative;
+}
+
+.ui-slider-horizontal {
+    width: 200px;
+}
+
+.out-line {
+	display: table;
+	margin-bottom: 30px;
+}
+
+.out-label {
+	display: table-cell;
+	width: 150px;
+	padding-bottom: 15px;
+	vertical-align: middle;
+}
+
+.out-slider {
+  background: linear-gradient(to right, #FF0000 0%, #FFD800 50%, #00FF21 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20px;
+  display: inline-block;
+ }
+ 
+.out-slider .ui-slider-handle { height: 26px; }
+ 
+.out-slider  .ui-slider-pip .ui-slider-label {top: 10px; font-weight: bold;}
+ 
+.out-slider  .ui-slider-pip .ui-slider-label[data-value="0"] { color: #FF0000; }
+.out-slider  .ui-slider-pip .ui-slider-label[data-value="0"]:hover { color: #BF0000; }
+
+.out-slider  .ui-slider-pip .ui-slider-label[data-value="1"] { color: #FFD800; }
+.out-slider  .ui-slider-pip .ui-slider-label[data-value="1"]:hover { color: #BF9F00; }
+
+.out-slider  .ui-slider-pip .ui-slider-label[data-value="2"] { color: #00FF21; }
+.out-slider  .ui-slider-pip .ui-slider-label[data-value="2"]:hover { color: #00BF16; }

@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>irrighino</title>
+
+	<link rel='stylesheet' type='text/css' href='css/jquery-ui.css' />
+	<link rel='stylesheet' type='text/css' href='css/jquery-ui-slider-pips.css' />
+	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css" />
+	<link rel='stylesheet' type='text/css' href='css/jquery.weekcalendar.css' />	
+	<link rel='stylesheet' type='text/css' href='css/main.css' />
+	<link rel='stylesheet' type='text/css' href='css/switches.css' />
+	<link rel='stylesheet' type='text/css' href='css/buttons.css' />
+	<link rel='stylesheet' type='text/css' href='css/fieldsets.css' />
+
+	<script type='text/javascript' src='js/jquery-1.11.2.min.js'></script>
+	<script type='text/javascript' src='js/jquery-migrate-1.2.1.min.js'></script>
+	<script type='text/javascript' src='js/jquery-ui-1.11.3.js'></script>
+
+	<script type="text/javascript" src="js/jquery-ui-slider-pips.js"></script>
+	<script type="text/javascript" src="js/date.js"></script>
+	<script type='text/javascript' src='js/jquery.weekcalendar.js'></script>
+	<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+	<script type='text/javascript' src='php/irrighino-js.php'></script>
+
+	<script type='text/javascript'>
+	
+		$(document).ready(function() {
+
+			init();
+			
+		});	
+	</script>
+  
+</head>
+<body>
+  
+  <img src="images/logo.jpg" />
+  
+  <div id="dialog" title="Warning"></div>
+  
+  <div id="tabs">
+  <ul>
+	<li><a href="#runtime-fragment"><span>Runtime</span></a></li>
+    <li><a href="#setup-fragment"><span>Setup</span></a></li>
+    <li><a href="#events-fragment"><span>Events</span></a></li>
+  </ul>
+
+<div id="runtime-fragment">
+	<!--<div class="top-container">
+		<fieldset>
+			<!--<div class="valvola-line">
+				<span class="valvola-element">V1
+					<label class="switch switch-green">
+						<input type="checkbox" class="switch-input" id="v1-onoff">
+						<span class="switch-label" data-on="On" data-off="Off"></span>
+						<span class="switch-handle"></span>
+					</label>
+					<label class="switch-large">
+						<input type="checkbox" class="switch-input" id="v1-automanual">
+						<span class="switch-label" data-on="AUTO" data-off="MANUAL"></span>
+						<span class="switch-handle-large"></span>
+					</label>
+				</span>	
+				<span class="valvola-element">V2
+					<label class="switch switch-green">
+						<input type="checkbox" class="switch-input" id="v2-onoff">
+						<span class="switch-label" data-on="On" data-off="Off"></span>
+						<span class="switch-handle"></span>
+					</label>
+					<label class="switch-large">
+						<input type="checkbox" class="switch-input" id="v2-automanual">
+						<span class="switch-label" data-on="AUTO" data-off="MANUAL"></span>
+						<span class="switch-handle-large"></span>
+					</label>
+				</span>	
+				<span class="valvola-element">V3
+					<label class="switch switch-green">
+						<input type="checkbox" class="switch-input" id="v3-onoff">
+						<span class="switch-label" data-on="On" data-off="Off"></span>
+						<span class="switch-handle"></span>
+					</label>
+					<label class="switch-large">
+						<input type="checkbox" class="switch-input" id="v3-automanual">
+						<span class="switch-label" data-on="AUTO" data-off="MANUAL"></span>
+						<span class="switch-handle-large"></span>
+					</label>
+				</span>
+			</div>	
+		</fieldset>
+	</div> -->
+	
+</div>  
+  
+<div id="setup-fragment">
+	<div id='calendar'></div>
+</div>
+	
+<div id="events-fragment">
+	<table id="events-table" class="display" data-order='[[ 1, "desc" ]]'>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Date</th>
+			<th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>A</td>
+            <td>Row 1 Data 2</td>
+			<td>Row 1 Data 3</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>Row 2 Data 2</td>
+			<td>Row 2 Data 3</td>
+        </tr>
+    </tbody>
+	</table>
+</div>
+
+</body>
+</html>

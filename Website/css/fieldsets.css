@@ -1,0 +1,12 @@
+fieldset {
+border: 1px solid #fff;
+-moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+-webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+border-radius: 18px;
+-webkit-border-radius: 18px;
+-moz-border-radius: 18px;
+width: 600px;
+display: inline-block;
+margin-right: 30px;
+}
