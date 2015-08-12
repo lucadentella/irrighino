@@ -26,14 +26,14 @@ Copy all the files in the "website" folder to the Yun SD card, in a new folder n
 
 Add the following 3 lines to the crontab ("crontab -e" or through the web interface):
 
-<code>* * * * * /usr/bin/php-cli /www/sd/irrighino/php/irrighinoTask.php</code>
-<code>05 00 * * * /usr/bin/php-cli /www/sd/irrighino/php/purgeOldEvents.php</code>
-<code>10 00 * * * /usr/bin/php-cli /www/sd/irrighino/php/purgeOldLogs.php</code>
+* * * * * /usr/bin/php-cli /www/sd/irrighino/php/irrighinoTask.php
+05 00 * * * /usr/bin/php-cli /www/sd/irrighino/php/purgeOldEvents.php
+10 00 * * * /usr/bin/php-cli /www/sd/irrighino/php/purgeOldLogs.php
 
 
 # usage
 
-Connect to http://<yun-ip>/sd/irrighino
+Connect to http://'yun-ip'/sd/irrighino
 
 
 # customize
