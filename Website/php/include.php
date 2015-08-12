@@ -48,7 +48,7 @@ $outputs[2]["borderColor"] = "#00E21A";
 // --------------- Timestamp and logging configuration ---------------
 
 date_default_timezone_set("Europe/Rome");
-define("LOG_DIR", "C:\\temp\\");
+define("LOG_DIR", "/var/log/irrighino/");
 define("RETENTION_DAYS", 7);
 
 
