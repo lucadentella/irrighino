@@ -26,9 +26,15 @@ Copy all the files in the "website" folder to the Yun SD card, in a new folder n
 
 Add the following 3 lines to the crontab ("crontab -e" or through the web interface):
 
-* * * * * /usr/bin/php-cli /www/sd/irrighino/php/irrighinoTask.php
-05 00 * * * /usr/bin/php-cli /www/sd/irrighino/php/purgeOldEvents.php
-10 00 * * * /usr/bin/php-cli /www/sd/irrighino/php/purgeOldLogs.php
+>\* * * * * /usr/bin/php-cli /www/sd/irrighino/php/irrighinoTask.php
+
+>05 00 * * * /usr/bin/php-cli /www/sd/irrighino/php/purgeOldEvents.php
+
+>10 00 * * * /usr/bin/php-cli /www/sd/irrighino/php/purgeOldLogs.php
+
+Create the log folder (/var/log/irrighino/)
+
+If you changed the default Yun password ("arduino"), update the include.php file accordingly.
 
 
 # usage
