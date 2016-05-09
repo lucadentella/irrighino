@@ -15,6 +15,7 @@ An Arduino Yun with the latest firmware and the following modules (you can insta
 * php5-mod-pdo
 * php5-mod-pdo-sqlite
 * zoneinfo-core
+* zoneinfo-europe
 
 The Yun webserver (uhttpd) must be configured to execute php scripts, as explained here:
 http://www.lucadentella.it/en/2013/12/05/yun-utilizzare-php/
