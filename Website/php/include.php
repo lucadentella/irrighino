@@ -96,6 +96,8 @@ function sendReturnCode($code, $message) {
 
 function logMessage($msg) {
 	
+		if(!file_exists(LOG_DIR)) mkdir(LOG_DIR);
+	
 		chdir (__DIR__);
 		$logfile_suffix = date("Ymd");
 		$current_time = date("Y-m-d H:i:s");
