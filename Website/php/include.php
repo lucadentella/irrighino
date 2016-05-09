@@ -29,7 +29,7 @@ define ("ARDUINO_BASE_URL", "http://localhost/arduino/");
 
 // --------------- Output configuration ---------------
 
-define ("OUTPUTS_NUMBER", 3);
+define ("OUTPUTS_NUMBER", 4);
 
 $outputs = array();
 $outputs[0]["name"] = "Front    ";
@@ -43,6 +43,10 @@ $outputs[1]["borderColor"] = "#E00000";
 $outputs[2]["name"] = "Right";
 $outputs[2]["baseColor"] = "#00FF21";
 $outputs[2]["borderColor"] = "#00E21A";
+
+$outputs[2]["name"] = "Rear";
+$outputs[2]["baseColor"] = "#005DFF";
+$outputs[2]["borderColor"] = "#0049C9";
 
 
 // --------------- Timestamp and logging configuration ---------------
