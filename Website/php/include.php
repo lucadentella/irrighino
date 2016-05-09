@@ -44,9 +44,9 @@ $outputs[2]["name"] = "Right";
 $outputs[2]["baseColor"] = "#00FF21";
 $outputs[2]["borderColor"] = "#00E21A";
 
-$outputs[2]["name"] = "Rear";
-$outputs[2]["baseColor"] = "#005DFF";
-$outputs[2]["borderColor"] = "#0049C9";
+$outputs[3]["name"] = "Rear";
+$outputs[3]["baseColor"] = "#005DFF";
+$outputs[3]["borderColor"] = "#0049C9";
 
 
 // --------------- Timestamp and logging configuration ---------------
