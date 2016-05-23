@@ -35,9 +35,11 @@ void setup() {
   pinMode(OUT_1, OUTPUT);
   pinMode(OUT_2, OUTPUT);
   pinMode(OUT_3, OUTPUT);
+  pinMode(OUT_4, OUTPUT);
   pinMode(LED_1, OUTPUT);
   pinMode(LED_2, OUTPUT);
   pinMode(LED_3, OUTPUT);
+  pinMode(LED_4, OUTPUT); 
   pinMode(RAIN_SENSOR, INPUT_PULLUP);
   DEBUG_PRINTLN("- PINs configured");
   
@@ -46,6 +48,7 @@ void setup() {
   switch1Position = SWITCH_AUTO;
   switch2Position = SWITCH_AUTO;
   switch3Position = SWITCH_AUTO;
+  switch4Position = SWITCH_AUTO;
   DEBUG_PRINTLN("- Global variables initialized");
   
   // initialize the YunServer to receive commands
@@ -60,21 +63,24 @@ void setup() {
 void loop() {
   
   // ---------- CHECK PANEL SWITCHES ----------
-  int actualSwitchPosition;
-  actualSwitchPosition = readSwitchStatus(SWITCH_1);
-  if(actualSwitchPosition != switch1Position) {
-    updateSwitchPosition(SWITCH_1, actualSwitchPosition);
-    switch1Position = actualSwitchPosition;
-  }
-  actualSwitchPosition = readSwitchStatus(SWITCH_2);
-  if(actualSwitchPosition != switch2Position) {
-    updateSwitchPosition(SWITCH_2, actualSwitchPosition);
-    switch2Position = actualSwitchPosition;
-  }
-  actualSwitchPosition = readSwitchStatus(SWITCH_3);
-  if(actualSwitchPosition != switch3Position) {
-    updateSwitchPosition(SWITCH_3, actualSwitchPosition);
-    switch3Position = actualSwitchPosition;
+  if(USE_SWITCHES) {
+  
+    int actualSwitchPosition;
+    actualSwitchPosition = readSwitchStatus(SWITCH_1);
+    if(actualSwitchPosition != switch1Position) {
+      updateSwitchPosition(SWITCH_1, actualSwitchPosition);
+      switch1Position = actualSwitchPosition;
+    }
+    actualSwitchPosition = readSwitchStatus(SWITCH_2);
+    if(actualSwitchPosition != switch2Position) {
+      updateSwitchPosition(SWITCH_2, actualSwitchPosition);
+      switch2Position = actualSwitchPosition;
+    }
+    actualSwitchPosition = readSwitchStatus(SWITCH_3);
+    if(actualSwitchPosition != switch3Position) {
+      updateSwitchPosition(SWITCH_3, actualSwitchPosition);
+      switch3Position = actualSwitchPosition;
+    }
   }
   
   // ---------- CHECK RAIN SENSOR ----------
@@ -179,6 +185,7 @@ int getOutputId(int outId) {
   if(outId == 0) return OUT_1;
   if(outId == 1) return OUT_2;
   if(outId == 2) return OUT_3;  
+  if(outId == 3) return OUT_4;   
 }
 
 // Get the output that corresponds to a switch
@@ -186,7 +193,8 @@ int getSwitchOutput(int switchId) {
 
   if(switchId == SWITCH_1) return OUT_1;
   if(switchId == SWITCH_2) return OUT_2;
-  if(switchId == SWITCH_3) return OUT_3;  
+  if(switchId == SWITCH_3) return OUT_3;
+  if(switchId == SWITCH_4) return OUT_4;   
 }
 
 // Get the switch that corresponds to an output
@@ -195,6 +203,7 @@ int getOutputSwitch(int outputId) {
   if(outputId == OUT_1) return SWITCH_1;
   if(outputId == OUT_2) return SWITCH_2;
   if(outputId == OUT_3) return SWITCH_3; 
+  if(outputId == OUT_4) return SWITCH_4;
 }
 
 // Get the led that corresponds to an output
@@ -202,7 +211,8 @@ int getOutputLed(int outputId) {
 
   if(outputId == OUT_1) return LED_1;
   if(outputId == OUT_2) return LED_2;
-  if(outputId == OUT_3) return LED_3;  
+  if(outputId == OUT_3) return LED_3;
+  if(outputId == OUT_4) return LED_4; 
 }
 
 // Get the switch status
@@ -211,6 +221,7 @@ int getSwitchStatus(int switchId) {
   if(switchId == SWITCH_1) return switch1Position;
   if(switchId == SWITCH_2) return switch2Position;
   if(switchId == SWITCH_3) return switch3Position;
+  if(switchId == SWITCH_4) return switch4Position;
 }
 
 
@@ -245,7 +256,9 @@ void printDebugInfo() {
   DEBUG_PRINT("Switch 2 position: ");
   DEBUG_PRINTLN(getSwitchPositionText(switch2Position));  
   DEBUG_PRINT("Switch 3 position: ");
-  DEBUG_PRINTLN(getSwitchPositionText(switch2Position));
+  DEBUG_PRINTLN(getSwitchPositionText(switch3Position));
+  DEBUG_PRINT("Switch 4 position: ");
+  DEBUG_PRINTLN(getSwitchPositionText(switch4Position));  
   DEBUG_PRINTLN();
   
   DEBUG_PRINT("Rain sensor status: ");

@@ -24,6 +24,7 @@ char* getRainSensorText(int sensorStatus) {
 char* getOutputDescription(int outputId) {
 
   if(outputId == OUT_1) return "FRONT";
-  if(outputId == OUT_2) return "SIDE";
-  if(outputId == OUT_3) return "REAR";
+  if(outputId == OUT_2) return "RIGHT";
+  if(outputId == OUT_3) return "LEFT";
+  if(outputId == OUT_4) return "REAR";
 }
