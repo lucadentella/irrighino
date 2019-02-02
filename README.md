@@ -5,6 +5,9 @@ http://www.lucadentella.it/en/2015/08/04/irrighino/
 
 # requirements
 
+**If you're using a new Arduino Yun Rev.2 or a Yun Shield, follow the steps in the following post to prepare the board for Irrighino:**
+http://www.lucadentella.it/en/2019/02/02/irrighino-e-yun-rev-2/
+
 An Arduino Yun with the latest firmware and the following modules (you can install them using opkg or through the web interface):
 
 * php5
