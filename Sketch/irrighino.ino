@@ -18,6 +18,7 @@ YunServer server;
 int switch1Position;
 int switch2Position;
 int switch3Position;
+int switch4Position;
 bool rainSensorStatus;
 
 
