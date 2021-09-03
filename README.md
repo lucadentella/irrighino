@@ -3,6 +3,10 @@
 irrighino is a complete watering system based on Arduino Yun
 http://www.lucadentella.it/en/2015/08/04/irrighino/
 
+## :bulb: New version for Raspberry Pi :bulb:
+As Arduino Yun is discontinued, I modified this project to be compatible with Raspberry Pi.
+Please welcome [**irrighino Pi**](https://github.com/lucadentella/irrighino-pi)!
+
 # requirements
 
 **If you're using a new Arduino Yun Rev.2 or a Yun Shield, follow the steps in the following post to prepare the board for Irrighino:**
